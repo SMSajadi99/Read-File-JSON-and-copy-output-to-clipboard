@@ -33,3 +33,22 @@ pyperclip.copy(output)
 This code will both print the output and copy it to the clipboard using the `pyperclip` library.
 
 Other programming languages and operating systems may have different methods for accessing and manipulating the clipboard. If you let me know which language or OS you are using, I can provide more specific instructions.
+The `pyperclip` library in Python allows copying only certain data types to the clipboard, such as strings (`str`), integers (`int`), floats (`float`), and booleans (`bool`). If you're trying to copy a list to the clipboard using `pyperclip.copy()`, you'll encounter the `PyperclipException` you mentioned.
+
+To work around this limitation, you can convert the list to a string before copying it to the clipboard. Here's an example:
+
+```python
+import pyperclip
+
+# Your list
+my_list = [1, 2, 3, 4, 5]
+
+# Convert the list to a string
+output = str(my_list)
+
+# Print the output
+print(output)
+
+# Copy the output to clipboard
+pyperclip.copy(output)
+```
