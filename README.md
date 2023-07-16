@@ -1,6 +1,12 @@
 # Tutorial-JSON
 #json #dictionary 
+```python
+import json
 
+with open(r"C:\Users\smsaj\Downloads\results_nusc.json") as f:
+    table = json.load(f)
+tokens = list(table['results'].keys())
+```
 
 To save printed output or copy it to the clipboard automatically, you can use the following steps depending on the programming language or operating system you are using:
 
