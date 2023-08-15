@@ -52,3 +52,22 @@ print(output)
 # Copy the output to clipboard
 pyperclip.copy(output)
 ```
+For input list:
+```python
+import pyperclip
+import json
+
+# Example list
+my_list = [1, 2, 3, 4, 5]
+
+# Convert list to JSON string and copy to clipboard
+list_as_json = json.dumps(my_list)
+pyperclip.copy(list_as_json)
+
+# Retrieve JSON string from clipboard and convert back to list
+json_from_clipboard = pyperclip.paste()
+list_from_clipboard = json.loads(json_from_clipboard)
+
+print(list_from_clipboard)  # Output: [1, 2, 3, 4, 5]
+
+```
